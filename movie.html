@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>想来这儿就对了</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.css">
+    <script src="https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.js"></script>
+</head>
+
+<body>
+    <div class="search">
+        <div class="input-group">
+            <input type="text" id="input" class="form-control" placeholder="请输入视频播放源链接">
+            <span class="input-group-btn">
+                <button class="btn btn-success">立即播放</button>
+            </span>
+        </div>
+    </div>
+    <div id="dplayer">
+        <iframe src="" width="100%" height="600px" allowtransparency="true" frameborder="0" scrolling="no" class="content" allowfullscreen="true" quality="high"></iframe>
+    </div>
+    <script>
+    $('.btn').click(function() {
+        $('#dplayer .content').attr('src', 'https://jx.wslmf.com/?url=' + $('#input').val());
+    });
+   
+    </script>
+
+</body>
+
+</html>
